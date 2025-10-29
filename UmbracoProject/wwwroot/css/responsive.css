@@ -61,6 +61,10 @@
         border-top: 0;
         overflow: visible;
     }
+
+    .service-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 /* Responsive for tablet */
@@ -122,6 +126,18 @@
     .nav-li.current .nav-a::after {
         display: none;
     }
+
+    .service-title {
+        font-size: 1.375rem;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-card-image {
+        height: 220px;
+    }
 }
 
 /* Responsive for Mobile */
@@ -141,6 +157,13 @@
 
     .hero-container .rte {
         display: none;
+    }
+
+    .btn {
+        display: inline-flex;
+        width: auto;
+        max-width: max-content;
+        align-self: flex-start;
     }
 
     .top-bar-content {
@@ -195,5 +218,16 @@
 
     .nav-li.current .nav-a::after {
         display: none;
+    }
+    .service-title {
+        font-size: var(--text-md);
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card-image {
+        height: 180px;
     }
 }
