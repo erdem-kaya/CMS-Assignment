@@ -28,3 +28,56 @@
         max-width: 1536px;
     }
 }
+
+
+/* Responsive for desktop */
+@media (min-width: 1024px) {
+    .hero {
+        padding-block: 7rem;
+    }
+
+    .hero-container {
+        width: 41.6667%;
+    }
+
+    .hero-title {
+        font-size: 4.5rem;
+        line-height: 1;
+    }
+}
+
+/* Responsive for tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hero {
+        padding-block: 6rem;
+    }
+
+    .hero-container {
+        width: 55%;
+    }
+
+    .hero-title {
+        font-size: 3.25rem;
+        line-height: 1.05;
+    }
+}
+
+/* Responsive for Mobile */
+@media (max-width: 767px) {
+    .hero {
+        padding-block: 4.5rem;
+    }
+
+    .hero-container {
+        width: 100%;
+    }
+
+    .hero-title {
+        font-size: 2.25rem;
+        line-height: 1.1;
+    }
+
+    .hero-container .rte {
+        display: none;
+    }
+}
