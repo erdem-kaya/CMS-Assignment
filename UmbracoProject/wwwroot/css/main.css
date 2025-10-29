@@ -138,6 +138,20 @@ h3, h4 {
         opacity: 0.85;
     }
 
+/* Footer */
+.site-footer {
+    background: #000000;
+    min-height: 44px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    color: var(--color-primary);
+    font-size: var(--text-xs);
+}
+
+
 /* Header - NavBar */
 .navbar-header {
     position: relative;
