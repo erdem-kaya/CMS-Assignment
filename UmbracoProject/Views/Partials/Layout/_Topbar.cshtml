@@ -1,0 +1,47 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+@{
+    /* Get the root content and site settings */
+    var rootContent = Umbraco.ContentAtRoot();
+    /* Get the site settings */
+    var siteSettings = rootContent.OfType<SiteSettings>().FirstOrDefault();
+    /* Get the contact address */
+    var contactAddress = siteSettings?.ContactAddress ?? "Ingen address angiven";
+}
+
+<section class="top-bar">
+    <div class="container">
+        <div class="top-bar-content">
+            <p class="top-bar-address">@contactAddress</p>
+            <div class="top-bar-socialMedia">
+                @if (siteSettings?.PlatformList != null)
+                {
+                    foreach (var item in siteSettings.PlatformList)
+                    {
+                        if (item.Content is SocialMediaItem mediaItem)
+                        {
+                            switch (mediaItem.PlatformName!.ToLower())
+                            {
+                                case "facebook":
+                                    <a href="@mediaItem.PlatformAccountUrl" target="_blank" class="social-media-icon">
+                                        <i class="fa-brands fa-facebook"></i>
+                                    </a>
+                                    break;
+                                case "x":
+                                    <a href="@mediaItem.PlatformAccountUrl" target="_blank" class="social-media-icon">
+                                        <i class="fa-brands fa-x-twitter"></i>
+                                    </a>
+                                    break;
+                                case "linkedin":
+                                    <a href="@mediaItem.PlatformAccountUrl" target="_blank" class="social-media-icon">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                    </a>
+                                    break;
+                            }
+                        }
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</section>
