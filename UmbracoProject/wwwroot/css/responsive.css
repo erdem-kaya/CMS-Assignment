@@ -65,6 +65,20 @@
     .service-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+    .team-section-member-list {
+        margin: 0 100px;
+        row-gap: 2rem;
+    }
+
+    .team-col-3 {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+
+    .team-col-4 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
 }
 
 /* Responsive for tablet */
@@ -146,6 +160,21 @@
 
     .breadcrumb-content h1 {
         font-size: 2rem;
+    }
+
+    .team-section-member-list {
+        margin: 0 24px;
+        row-gap: 1.5rem;
+    }
+
+    .team-col-3, .team-col-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 12px;
+    }
+
+    .team-member-image {
+        height: 280px;
     }
 }
 
@@ -247,5 +276,28 @@
 
     .breadcrumb-content h1 {
         font-size: 2rem;
+    }
+    .team-section-member-list {
+        margin: 0;
+        row-gap: 1.25rem;
+    }
+
+    .team-col-3, .team-col-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .team-member-image {
+        height: 320px;
+        object-fit: none;
+    }
+
+    .team-member-name {
+        font-size: var(--text-md);
+    }
+
+    .team-member-role {
+        font-size: var(--text-xs);
     }
 }
