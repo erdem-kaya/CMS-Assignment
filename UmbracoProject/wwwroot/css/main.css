@@ -50,3 +50,85 @@ h3, h4 {
     margin-inline: auto;
     padding-inline: var(--container-px);
 }
+
+/* Rich text editor */
+.rte p {
+    color: var(--color-body-text);
+    font-size: var(--text-md);
+    line-height: 1.6;
+    margin: 0 0 1rem 0;
+}
+
+.rte a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-self: flex-start;
+    width: auto;
+    max-width: max-content;
+    text-align: center;
+    text-decoration: none;
+    border: 0;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: var(--color-secondary-light);
+    padding: 0.85rem 2.5rem;
+}
+
+    .btn-primary:hover {
+        color: var(--color-secondary);
+        opacity: 0.95;
+    }
+
+/* Hero Section */
+.hero {
+    position: relative;
+    padding-block: 4.5rem;
+    isolation: isolate;
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+    .hero-image .hero-background-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+.hero .container {
+    position: relative;
+    z-index: 10;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: 100%;
+}
+
+.hero-title {
+    font-size: 2.25rem;
+    line-height: 1.1;
+    color: var(--color-primary);
+    font-weight: 700;
+    margin: 0;
+}
