@@ -138,6 +138,15 @@
     .service-card-image {
         height: 220px;
     }
+
+    .breadcrumb {
+        padding-block: 3rem;
+        background-size: 440px auto, 440px auto;
+    }
+
+    .breadcrumb-content h1 {
+        font-size: 2rem;
+    }
 }
 
 /* Responsive for Mobile */
@@ -229,5 +238,14 @@
 
     .service-card-image {
         height: 180px;
+    }
+
+    .breadcrumb {
+        padding-block: 3rem;
+        background-size: 350px auto, 240px auto;
+    }
+
+    .breadcrumb-content h1 {
+        font-size: 2rem;
     }
 }
