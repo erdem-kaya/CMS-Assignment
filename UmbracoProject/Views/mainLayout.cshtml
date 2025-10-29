@@ -4,7 +4,13 @@
 
 	Layout = null;
 
-	var pageTitle = !string.IsNullOrEmpty(Model.Name) ? $"Onatrix | {Model.Name}" : "Onatrix";
+	/* Get the root content and site settings */
+	var rootContent = Umbraco.ContentAtRoot();
+	/* Get the site settings */
+	var siteSettings = rootContent.OfType<SiteSettings>().FirstOrDefault();
+
+	var siteName = siteSettings?.SiteName ?? "Onatrix";
+	var pageTitle = Model.Level == 1 ? $"{siteName}" : $"{siteName} | {Model.Name}";
 }
 
 <!DOCTYPE html>
@@ -19,6 +25,7 @@
 	<link rel="stylesheet" href="~/css/responsive.css" rel="stylesheet" asp-append-version="true">
 </head>
 <body>
+	<partial name="Partials/Layout/_Topbar" />
 	@RenderBody()
 	<script src="~/js/main.js" asp-append-version="true"></script>
 </body>
