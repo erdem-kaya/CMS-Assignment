@@ -1,0 +1,100 @@
+﻿.umb-tiptap-editor .onx-heading-1,
+.onx-heading-1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+    letter-spacing: 0;
+    margin: 0 0 16px 0;
+}
+
+.umb-tiptap-editor .onx-heading-2,
+.onx-heading-2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: 0;
+    margin: 0 0 16px 0;
+}
+
+.umb-tiptap-editor .onx-heading-3,
+.onx-heading-3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: normal; 
+    letter-spacing: 0;
+    margin: 0 0 12px 0;
+}
+
+.umb-tiptap-editor .onx-heading-4,
+.onx-heading-4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: normal;
+    letter-spacing: 0;
+    margin: 0 0 10px 0;
+}
+
+.umb-tiptap-editor .onx-heading-5,
+.onx-heading-5 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: normal;
+    letter-spacing: 0;
+    margin: 0 0 8px 0;
+}
+
+.umb-tiptap-editor .onx-heading-6,
+.onx-heading-6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: normal;
+    letter-spacing: 0;
+    margin: 0 0 6px 0;
+}
+
+.umb-tiptap-editor .onx-body,
+.onx-body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0;
+    margin: 0 0 16px 0;
+}
+
+.umb-tiptap-editor .onx-quote,
+.onx-quote {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 20px;
+    line-height: normal;
+    letter-spacing: 0;
+    margin: 0 0 16px 0;
+}
+
+.umb-tiptap-editor .onx-note-1,
+.onx-note-1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: normal;
+    letter-spacing: 0;
+    margin: 0 0 10px 0;
+}
+
+.umb-tiptap-editor .onx-note-2,
+.onx-note-2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: normal;
+    letter-spacing: 0;
+    margin: 0 0 10px 0;
+}
