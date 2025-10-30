@@ -867,6 +867,10 @@ form {
     text-align: center;
 }
 
+.success-story-content {
+    margin-right: 6rem;
+}
+
 .success-story-content .success-story-label {
     font-size: var(--text-xs);
     font-weight: 700;
