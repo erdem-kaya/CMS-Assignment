@@ -150,6 +150,7 @@ h2, h3, h4, p {
     align-items: center;
     color: var(--color-primary);
     font-size: var(--text-xs);
+    padding-block: 1.5rem;
 }
 
 /* Breadcrumb - Page Header */
@@ -914,8 +915,18 @@ form {
     font-size: var(--text-md);
 }
 
-/*
+
 .success-story-image img {
-    margin-bottom: -20rem
+    margin-bottom: -17rem
 }
-*/
+
+/* Partners Section */
+
+.partners-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 20rem;
+    margin-bottom: 4rem;
+}
