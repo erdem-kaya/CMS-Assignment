@@ -10,49 +10,49 @@
       "meta": {
         "alias": "RichTextEditorStyleMenu",
         "icon": "icon-palette",
-        "label": "My Text Styles"
+        "label": "Onitrix Styles"
       },
       "items": [
         {
           "label": "Headings",
           "items": [
             {
-              "label": "Heading 01 – 50px Bold",
+              "label": "Heading 01 - 50px Bold",
               "data": {
                 "tag": "h1",
                 "class": "onx-heading-1"
               }
             },
             {
-              "label": "Heading 02 – 40px Bold",
+              "label": "Heading 02 - 40px Bold",
               "data": {
                 "tag": "h2",
                 "class": "onx-heading-2"
               }
             },
             {
-              "label": "Heading 03 – 30px Bold",
+              "label": "Heading 03 - 30px Bold",
               "data": {
                 "tag": "h3",
                 "class": "onx-heading-3"
               }
             },
             {
-              "label": "Heading 04 – 25px Bold",
+              "label": "Heading 04 - 25px Bold",
               "data": {
                 "tag": "h4",
                 "class": "onx-heading-4"
               }
             },
             {
-              "label": "Heading 05 – 22px SemiBold",
+              "label": "Heading 05 - 22px SemiBold",
               "data": {
                 "tag": "h5",
                 "class": "onx-heading-5"
               }
             },
             {
-              "label": "Heading 06 – 18px Bold",
+              "label": "Heading 06 - 18px Bold",
               "data": {
                 "tag": "h6",
                 "class": "onx-heading-6"
@@ -64,21 +64,21 @@
           "label": "Body & Notes",
           "items": [
             {
-              "label": "Body text – 14px Regular",
+              "label": "Body text - 14px Regular",
               "data": {
                 "tag": "p",
                 "class": "onx-body"
               }
             },
             {
-              "label": "Note 1 – 13px Regular",
+              "label": "Note 1 - 13px Regular",
               "data": {
                 "tag": "p",
                 "class": "onx-note-1"
               }
             },
             {
-              "label": "Note 2 – 13px SemiBold",
+              "label": "Note 2 - 13px SemiBold",
               "data": {
                 "tag": "p",
                 "class": "onx-note-2"
@@ -90,10 +90,22 @@
           "label": "Quotes",
           "items": [
             {
-              "label": "Quote – 20px Light Italic",
+              "label": "Quote - 20px Light Italic",
               "data": {
                 "tag": "p",
                 "class": "onx-quote"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Labels",
+          "items": [
+            {
+              "label": "Label â€“ 14px Bold",
+              "data": {
+                "tag": "span",
+                "class": "onx-label"
               }
             }
           ]
