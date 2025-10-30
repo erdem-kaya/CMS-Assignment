@@ -35,7 +35,7 @@ body {
     margin: 0;
 }
 
-h3, h4 {
+h2, h3, h4, p {
     margin: 0;
 }
 
@@ -828,7 +828,7 @@ form {
 .why-choose-us-section {
     background-image: url('/images/Group.svg');
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: center 5rem;
     background-size: 1024px auto;
     margin-top: 6rem;
 }
@@ -847,3 +847,71 @@ form {
 .why-choose-us-image {
     margin-top: 3rem;
 }
+
+/* Success Story Section */
+
+.success-story-section {
+    background-color: var(--color-primary);
+    padding-block: 5rem;
+    margin-top: -.4rem;
+    background-image: url('/images/dot-map.svg');
+    background-repeat: no-repeat;
+    background-position: center 5.5rem;
+}
+
+.success-story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.success-story-content .success-story-label {
+    font-size: var(--text-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+}
+
+.success-story-content .success-story-title {
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--color-white);
+}
+
+.success-story-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    margin-block: 2rem;
+    margin-inline: 7rem;
+}
+    .success-story-list > .success-story-item:nth-last-child(1) {
+        width: 34%;
+    }
+    .success-story-list > .success-story-item:nth-last-child(2) {
+        width: 25%;
+    }
+
+    .success-story-list > .success-story-item:nth-last-child(3) {
+        width: 25%;
+    }
+
+.success-stories-unit {
+    color: var(--color-secondary);
+    font-size: 100px;
+    font-weight: 500;
+}
+
+.success-stories-desc {
+    color: var(--color-white);
+    font-size: var(--text-md);
+}
+
+/*
+.success-story-image img {
+    margin-bottom: -20rem
+}
+*/
