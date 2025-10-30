@@ -13,7 +13,8 @@
     --color-border-light: #606966;
     --color-border-hover: #D9C3A9;
     --color-drop-shadow: rgba(0, 0, 0, 0.12);
-    --color-footer: 0E0E0E;
+    --color-footer: #0E0E0E;
+    --color-text-danger: #ff5252;
     /* Text sizes - rem */
     --text-xl: 4.375rem;
     --text-lg: 2.5rem;
@@ -611,7 +612,7 @@ h3, h4 {
 .about-callback-left {
     display: flex;
     flex-direction: column;
-    width: 58.5%;
+    width: 46%;
 }
 
 .about-callback-label {
@@ -633,12 +634,13 @@ h3, h4 {
 .about-callback-right {
     display: flex;
     flex-direction: column;
-    width: 42%;
+    width: 37%;
     position: relative;
     z-index: 99;
     margin-top: -11rem;
     background: var(--color-white);
     box-shadow: 0 4px 6px -1px rgba(0,0,0,.10), 0 2px 4px -2px rgba(0,0,0,.10);
+    margin-left: 2.5rem;
 }
 
 .callback-form-content {
@@ -659,4 +661,164 @@ h3, h4 {
     font-size: var(--text-xs);
     font-style: italic;
     color: var(--color-body-text);
+}
+
+/* Form */
+
+.sr-only {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.callback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    margin-inline: .90rem;
+}
+
+form {
+    padding: 0 1rem 1.25rem;
+}
+
+.form-control,
+.select-option,
+.form-btn {
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+    max-width: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: .375rem;
+}
+.form-select select,
+.form-group input {
+    padding-block: 1rem;
+}
+
+.input-validate-error,
+.field-validation-error {
+    color: var(--color-text-danger);
+    opacity: 70%;
+    padding-inline:.2rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: .75rem;
+    border: 1px solid var(--color-border);
+    border-radius: .25rem;
+    background: var(--color-white);
+    color: var(--color-body-text);
+    line-height: 1.4;
+    transition: box-shadow 120ms ease, border-color 120ms ease;
+    outline: none;
+}
+
+.form-control.form-italic {
+    font-style: italic;
+}
+
+.form-control:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(79, 89, 85, .25);
+}
+
+.form-select {
+    position: relative;
+}
+
+.select-option {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    padding: .75rem;
+    padding-right: 2.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: .25rem;
+    background: var(--color-white);
+    color: var(--color-body-text);
+    line-height: 1.4;
+    transition: box-shadow 120ms ease, border-color 120ms ease;
+    outline: none;
+}
+
+    .select-option:focus {
+        border-color: var(--color-primary);
+        box-shadow: 0 0 0 2px rgba(79, 89, 85, .25);
+    }
+
+.select-icon {
+    pointer-events: none;
+    position: absolute;
+    inset-block: 0;
+    right: .75rem;
+    display: flex;
+    align-items: center;
+}
+
+    .select-icon .icon {
+        width: 1rem;
+        height: 1rem;
+        color: #6b7280;
+    }
+
+.form-submit {
+    margin-top: .45rem;
+}
+
+.form-btn {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    background: var(--color-secondary-light);
+    color: var(--color-primary);
+    font-weight: 700;
+    border: 0;
+    border-radius: .375rem;
+    padding: 1.2rem 3rem;
+    font-size: 1.125rem;
+    transition: opacity 120ms ease, transform 80ms ease;
+}
+
+    .form-btn:hover {
+        opacity: .95;
+    }
+
+    .form-btn:active {
+        transform: translateY(1px);
+    }
+
+.callback-request-success,
+.callback-request-error {
+    padding: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    border-radius: .375rem;
+}
+
+.callback-request-success {
+    background-color: #f0fdf4;
+    color: #15803d;
+}
+
+.callback-request-error {
+    background-color: #fef2f2;
+    color: #b91c1c;
 }
