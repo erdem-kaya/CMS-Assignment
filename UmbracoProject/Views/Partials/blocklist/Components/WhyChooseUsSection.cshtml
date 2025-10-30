@@ -1,0 +1,25 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.WhyChooseUsSection)Model.Content;
+}
+
+<section class="why-choose-us-section">
+    <div class="container">
+        <div class="why-choose-us-content">
+            <div class="why-choose-us-body">@Html.Raw(content.WhyChooseUsBody)</div>
+            <div class="why-choose-us-link">
+                @if (content.WhyChooseUsLink != null)
+                {
+                    <a class="btn btn-primary" href="@content.WhyChooseUsLink.Url">@content.WhyChooseUsLink.Name</a>
+                }
+            </div>
+            <div class="why-choose-us-image">
+                @if (content.WhyChooseUsBgImage != null)
+                {
+                    <img src="@content.WhyChooseUsBgImage.Url()" class="WhyChooseUs-image" alt="Why Choose Us image" />
+                }
+            </div>
+        </div>
+    </div>
+</section>
