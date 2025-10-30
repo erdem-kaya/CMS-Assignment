@@ -1,0 +1,10 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.SuccessStories)Model.Content;
+}
+
+<div class="success-stories">
+    <h2 class="success-stories-unit">@content.SuccessStoriesUnits</h2>
+    <p class="success-stories-desc">@content.SuccessStoriesDesc</p>
+</div>
