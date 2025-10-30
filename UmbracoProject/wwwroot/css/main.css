@@ -822,3 +822,28 @@ form {
     background-color: #fef2f2;
     color: #b91c1c;
 }
+
+/* Why Choose Us - Section */
+
+.why-choose-us-section {
+    background-image: url('/images/Group.svg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 1024px auto;
+    margin-top: 6rem;
+}
+.why-choose-us-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+.why-choose-us-body {
+    width:50%;
+}
+.why-choose-us-link {
+    margin-block: 2rem;
+}
+.why-choose-us-image {
+    margin-top: 3rem;
+}

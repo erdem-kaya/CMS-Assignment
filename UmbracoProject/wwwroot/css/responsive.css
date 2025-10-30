@@ -233,6 +233,15 @@
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
+    .why-choose-us-body {
+        width: 80%
+    }
+    .why-choose-us-image img{
+        margin-top: 1.25rem;
+        max-width: 720px;
+        width: 100%;
+        margin-inline: auto;
+    }
 }
 
 
@@ -402,5 +411,18 @@
     .form-btn {
         padding: 1rem 2rem;
         font-size: 1rem;
+    }
+    .why-choose-us-section {
+        margin-top: 3rem;
+    }
+    .why-choose-us-body {
+        width: 80%
+    }
+
+    .why-choose-us-image img {
+        margin-top: 1.25rem;
+        max-width: 720px;
+        width: 90%;
+        margin-inline: auto;
     }
 }
