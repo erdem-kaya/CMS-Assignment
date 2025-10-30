@@ -1,3 +1,5 @@
+using UmbracoProject.Services;
+
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 builder.CreateUmbracoBuilder()
@@ -5,6 +7,8 @@ builder.CreateUmbracoBuilder()
     .AddWebsite()
     .AddComposers()
     .Build();
+
+builder.Services.AddScoped<FormSubmissonsService>();
 
 WebApplication app = builder.Build();
 
