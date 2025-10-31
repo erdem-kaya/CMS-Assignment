@@ -53,7 +53,7 @@ h2, h3, h4, p {
 }
 
 /* Rich text editor */
-.rte p {
+/*.rte p {
     color: var(--color-body-text);
     font-size: var(--text-md);
     line-height: 1.6;
@@ -64,7 +64,7 @@ h2, h3, h4, p {
     color: var(--color-primary);
     text-decoration: underline;
     text-underline-offset: 2px;
-}
+}*/
 
 /* Buttons */
 .btn {
@@ -949,7 +949,7 @@ form {
     background-image: url('/images/component.svg');
     background-position: bottom;
     background-repeat: no-repeat;
-    width: 610px
+    width: 600px
 }
 
 .contact-info-content-right {
@@ -988,4 +988,68 @@ form {
 
 .italic {
     font-style: italic;
+}
+
+/* Info Card - BlockList */
+
+.info-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.info-card-title {
+    margin: 0;
+    color: var(--color-primary);
+    font-size: 1.375rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.info-card-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.info-card-text {
+    color: var(--color-body-text);
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Service Detail Section */
+.service-detail-section {
+    padding-block: 4rem;
+}
+
+.service-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2rem;
+}
+
+.service-detail-aside {
+    flex: 0 0 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.service-detail-line {
+    width: 1.6px;
+    background-color: var(--color-border, #d1d5db);
+    align-self: stretch;
+}
+
+.service-detail-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-inline: 2rem;
 }
