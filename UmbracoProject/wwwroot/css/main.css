@@ -143,6 +143,8 @@ h2, h3, h4, p {
 .site-footer {
     background: #000000;
     min-height: 44px;
+    position: relative;
+    z-index: 99;
 }
 
 .footer-content {
@@ -151,6 +153,7 @@ h2, h3, h4, p {
     color: var(--color-primary);
     font-size: var(--text-xs);
     padding-block: 1.5rem;
+
 }
 
 /* Breadcrumb - Page Header */
@@ -929,4 +932,60 @@ form {
     gap: 5rem;
     margin-top: 15rem;
     margin-bottom: 4rem;
+}
+
+/* Contact Info Section */
+
+.contact-info-content {
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+    padding-inline: 7rem;
+    padding-top: 3rem;
+    margin-bottom: -.45rem;
+}
+
+.contact-info-image {
+    background-image: url('/images/component.svg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    width: 610px
+}
+
+.contact-info-content-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.contact-info-title {
+    font-weight: 700;
+    font-size: var(--text-lg);
+    color: var(--color-primary);
+    width: 80%
+}
+
+.contact-detail-title {
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+}
+.contact-detail-title i {
+    color: var(--color-secondary)
+}
+
+.contact-detail-title span {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    color: var(--color-primary)
+}
+
+.contact-detail-value {
+    margin-left: 1.5rem;
+    font-size: var(--text-xs);
+    color: var(--color-primary);
+}
+
+.italic {
+    font-style: italic;
 }

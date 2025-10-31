@@ -1,0 +1,69 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.ContactInfoSection)Model.Content;
+    var settings = Model.Settings as ContentModels.ContactInfoSettings;
+    
+    // Hämta bakgrundsfärg från Sections settings
+    var sectionBgColor = settings?.ContactInfoBgColor?.Color ?? "FFFFFF"; 
+
+    // Hämta Contact Info från Site Settings
+    var siteSettings = Umbraco.ContentAtRoot().OfType<SiteSettings>().FirstOrDefault();
+    var contactAddress = siteSettings?.ContactAddress ?? "Ingen address angiven";
+    var contactPhone = siteSettings?.ContactPhone ?? "Ingen telefon angiven";
+    var contactEmail = siteSettings?.ContactEmail ?? "Ingen e-post angiven";
+}
+
+<section class="contact-info-section" style="background-color: @sectionBgColor">
+    <div class="container">
+        <div class="contact-info-content">
+
+            <div class="contact-info-content-left">
+                @if (content.ContactInfoBgImage != null)
+                {
+                    <div class="contact-info-image">
+                        <img src="@content.ContactInfoBgImage.Url()" alt="@(content.ContactInfoBgImage.Name ?? "Contact Info Image")" />
+                    </div>
+                }
+                <div class="conponent"></div>
+            </div>
+
+
+            <div class="contact-info-content-right">
+                <h2 class="contact-info-title">@content.ContactInfoTitle</h2>
+                
+                <div class="contact-details">
+                    <div class="contact-detail-title">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Office Location</span>
+                    </div>
+                    <div class="contact-detail-value">
+                        <p>@contactAddress</p>
+                    </div>
+                </div>
+
+                <div class="contact-details">
+                    <div class="contact-detail-title">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Phone number</span>
+                    </div>
+                    <div class="contact-detail-value">
+                        <p class="italic">@contactPhone</p>
+                    </div>
+                </div>
+
+                <div class="contact-details">
+                    <div class="contact-detail-title">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>E-mail address</span>
+                    </div>
+                    <div class="contact-detail-value">
+                        <p class="italic">@contactEmail</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
