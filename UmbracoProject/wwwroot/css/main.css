@@ -854,7 +854,7 @@ form {
 .success-story-section {
     background-color: var(--color-primary);
     padding-block: 5rem;
-    margin-top: -.4rem;
+    margin-top: -.43rem;
     background-image: url('/images/dot-map.svg');
     background-repeat: no-repeat;
     background-position: center 5.5rem;
