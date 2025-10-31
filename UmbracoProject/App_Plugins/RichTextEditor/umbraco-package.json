@@ -19,42 +19,42 @@
             {
               "label": "Heading 01 - 50px Bold",
               "data": {
-                "tag": "h1",
+                "tag": "span",
                 "class": "onx-heading-1"
               }
             },
             {
               "label": "Heading 02 - 40px Bold",
               "data": {
-                "tag": "h2",
+                "tag": "span",
                 "class": "onx-heading-2"
               }
             },
             {
               "label": "Heading 03 - 30px Bold",
               "data": {
-                "tag": "h3",
+                "tag": "span",
                 "class": "onx-heading-3"
               }
             },
             {
               "label": "Heading 04 - 25px Bold",
               "data": {
-                "tag": "h4",
+                "tag": "span",
                 "class": "onx-heading-4"
               }
             },
             {
               "label": "Heading 05 - 22px SemiBold",
               "data": {
-                "tag": "h5",
+                "tag": "span",
                 "class": "onx-heading-5"
               }
             },
             {
               "label": "Heading 06 - 18px Bold",
               "data": {
-                "tag": "h6",
+                "tag": "span",
                 "class": "onx-heading-6"
               }
             }
@@ -66,21 +66,21 @@
             {
               "label": "Body text - 14px Regular",
               "data": {
-                "tag": "p",
+                "tag": "span",
                 "class": "onx-body"
               }
             },
             {
               "label": "Note 1 - 13px Regular",
               "data": {
-                "tag": "p",
+                "tag": "span",
                 "class": "onx-note-1"
               }
             },
             {
               "label": "Note 2 - 13px SemiBold",
               "data": {
-                "tag": "p",
+                "tag": "span",
                 "class": "onx-note-2"
               }
             }
@@ -92,7 +92,7 @@
             {
               "label": "Quote - 20px Light Italic",
               "data": {
-                "tag": "p",
+                "tag": "span",
                 "class": "onx-quote"
               }
             }
@@ -106,6 +106,37 @@
               "data": {
                 "tag": "span",
                 "class": "onx-label"
+              }
+            },
+            {
+              "label": "Label - 20px Bold",
+              "data": {
+                "tag": "span",
+                "class": "onx-label-1"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Bullets",
+          "items": [
+            {
+              "label": "Bullets",
+              "data": {
+                "tag": "ul",
+                "class": "rte-ul"
+              }
+            }
+          ]
+        },
+        {
+          "label": "W-Full",
+          "items": [
+            {
+              "label": "W-Full",
+              "data": {
+                "tag": "img",
+                "class": "img-cover"
               }
             }
           ]
