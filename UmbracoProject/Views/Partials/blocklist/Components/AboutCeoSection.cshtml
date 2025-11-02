@@ -1,0 +1,30 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using UmbracoProject.ViewModels
+@{
+    var content = (ContentModels.AboutCeoSection)Model.Content;
+}
+
+<section class="about-ceo-section">
+    <div class="container">
+        <div class="about-ceo-content">
+           <div class="about-ceo-right">
+               @if (content.AboutCeoImage != null)
+               {
+                   <div class="about-ceo-image">
+                       <img src="@content.AboutCeoImage.Url()" alt="@content.AboutCeoImage.Name" />
+                   </div>
+               }
+               <div class="about-ceo-label italic">
+                   <p>@content.AboutCeoLabel</p>
+               </div>
+           </div>
+
+            <div class="about-ceo-left">
+                <div class="rte">
+                    @Html.Raw(content.AboutCeoDesc)
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

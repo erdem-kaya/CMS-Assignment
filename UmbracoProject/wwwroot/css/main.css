@@ -1053,3 +1053,24 @@ form {
     gap: 1.25rem;
     margin-inline: 2rem;
 }
+
+/* About Page - CEO Section */
+
+.about-ceo-section {
+    margin-block: 5rem;
+}
+
+.about-ceo-content {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+.about-ceo-left {
+    width: 47%;
+}
+
+.about-ceo-label {
+    font-size: var(--text-sm);
+    color: var(--color-primary);
+    padding-top: .5rem;
+}
