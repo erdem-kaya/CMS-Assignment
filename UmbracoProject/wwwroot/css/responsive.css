@@ -302,6 +302,41 @@
     .success-story-image img {
         width: 75%
     }
+
+    .partners-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .contact-info-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .contact-info-content-right {
+        padding-bottom: 4rem;
+    }
+
+    .contact-info-title {
+        width: 100%
+    }
+
+    .about-ceo-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-ceo-left {
+        width: 90%;
+    }
+
+    .testimonial-section {
+        padding: 2rem;
+    }
+
+    .testimonial-section-image {
+        display: none;
+    }
 }
 
 
@@ -562,5 +597,42 @@
     .success-story-image img {
         display:none;
     }
-    /* ~16px */
+
+    .partners-list {
+        display: none;
+    }
+
+    .contact-info-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .contact-info-content-left {
+        display: none;
+    }
+
+    .contact-info-content-right {
+        padding-bottom: 4rem;
+    }
+
+    .contact-info-title {
+        display: none;
+    }
+
+    .about-ceo-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-ceo-left {
+        width: 90%;
+    }
+
+    .testimonial-section {
+        padding: 2rem;
+    }
+
+    .testimonial-section-image {
+        display: none;
+    }
 }
