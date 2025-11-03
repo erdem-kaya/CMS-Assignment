@@ -434,6 +434,10 @@
         grid-template-columns: 1fr;
     }
 
+    .service-card {
+        width: 93%;
+    }
+
     .service-card-image {
         height: 180px;
     }
@@ -456,7 +460,7 @@
 
     .team-col-3, .team-col-4 {
         flex: 0 0 100%;
-        max-width: 100%;
+        max-width: 95%;
         padding: 0;
     }
 
@@ -622,6 +626,7 @@
     .about-ceo-content {
         flex-direction: column;
         align-items: center;
+        width: 95%;
     }
 
     .about-ceo-left {
