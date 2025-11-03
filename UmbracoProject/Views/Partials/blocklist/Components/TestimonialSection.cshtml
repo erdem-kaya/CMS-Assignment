@@ -1,0 +1,31 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.TestimonialSection)Model.Content;
+    var settings = Model.Settings as ContentModels.TestimonialSettings;
+
+    var sectionColor = settings?.TestimonialBgColor?.Color ?? "#F7F7F7";
+}
+
+<section class="testimonial-section" style="background-color: @sectionColor">
+    <div class="container">
+        <div class="testimonial-section-content">
+            <div class="testimonial-section-reviews">
+                <p>@content.TestimonialLabel</p>
+                <div class="rte">@Html.Raw(content.TestimonialReview)</div>
+            </div>
+        </div>
+    </div>
+
+
+
+    @if (content.TestimonialSectionImage != null)
+    {
+        <div class="testimonial-section-image">
+            <img src="@content.TestimonialSectionImage.Url()" alt="@(content.TestimonialSectionImage.Name ?? "Testimonial Section Image")" />
+        </div>
+    }
+
+    
+
+</section>
