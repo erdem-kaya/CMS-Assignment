@@ -1261,3 +1261,40 @@ form {
 .question-form .form-submit {
     justify-content: start;
 }
+
+/* Contact Card Item - Aside */
+
+.aside-contact-card {
+    background-color: var(--color-primary);
+    background-image: url('/images/Mail.svg');
+    background-repeat: no-repeat;
+    background-position: bottom right -2rem;
+    padding: 1.7rem 1rem;
+    border-radius: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.contact-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;  
+}
+
+.contact-card-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--color-secondary-light);
+}
+
+.contact-card-desc {
+    font-size: 14px;
+    color: var(--color-white);
+}
+
+.contact-card-input {
+    margin-top: 2rem;
+    margin-bottom: 1rem
+}
