@@ -60,4 +60,28 @@ public class FormSubmissonsService(IContentService contentService)
             return false;
         }
     }
+
+    public bool SaveQuestionFormRequest(QuestionFormViewModel model)
+    {
+        try
+        {
+            var container = _contentService.GetRootContent().FirstOrDefault(c => c.ContentType.Alias == "fromSubmissions");
+            if (container == null)
+                return false;
+            var requestName = $"QuestionForm: {model.Name} - {DateTime.Now:yyyy-MM-dd HH:mm:ss}";
+            var request = _contentService.Create(requestName, container, "questionForm");
+            if (request == null)
+                return false;
+            request.SetValue("questionName", model.Name);
+            request.SetValue("questionEmail", model.Email);
+            request.SetValue("questionMessage", model.Message);
+            var saveResult = _contentService.Save(request);
+            return saveResult.Success;
+        }
+        catch (Exception ex)
+        {
+            // Log the exception (ex) here if needed
+            return false;
+        }
+    }
 }

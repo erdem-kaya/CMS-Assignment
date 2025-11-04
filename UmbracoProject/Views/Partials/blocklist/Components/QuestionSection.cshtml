@@ -1,0 +1,57 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using UmbracoProject.ViewModels
+@{
+    var content = (ContentModels.QuestionSection)Model.Content;
+    var formViewModel = new QuestionFormViewModel();
+}
+
+<section class="question-section">
+    <div class="container">
+        <div class="question-section-content">
+            <p>@content.QuestionLabel</p>
+
+            <partial name="Partials/Forms/_QuestionForm" model=formViewModel />
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <div class="callback-request-success">
+                    @TempData["SuccessMessage"]
+                </div>
+            }
+            else if (TempData["ErrorMessage"] != null)
+            {
+                <div class="callback-request-error">
+                    @TempData["ErrorMessage"]
+                </div>
+            }
+
+
+
+
+@*             <div class="question-form">
+                <div class="question-form-del-1">
+                    <div class="form-group">
+                        <label class="form-label sr-only">Name</label>
+                        <input  type="text" class="form-control form-italic" />
+                        <span class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label sr-only">Email</label>
+                        <input type="email" class="form-control form-italic" />
+                        <span class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group text-area">
+                    <textarea class="form-control"></textarea>
+                </div>
+
+                <div class="form-submit">
+                    <button type="submit" class="form-btn">Submit</button>
+                </div>
+            </div> *@
+
+        </div>   
+    </div>
+</section>
