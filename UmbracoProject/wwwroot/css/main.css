@@ -706,10 +706,13 @@ form {
     flex-direction: column;
     gap: .375rem;
 }
-.form-select select,
-.form-group input {
-    padding-block: 1rem;
-}
+    .form-select select,
+    .form-group input {
+        padding-block: 1rem;
+        font-style: italic;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+    }
 
 .input-validate-error,
 .field-validation-error {
@@ -1118,19 +1121,6 @@ form {
     color: var(--color-secondary);
 }
 
-/*@media (max-width: 992px) {
-    .testimonial-section {
-        padding: 0 0 2rem 0;
-        min-height: auto;
-    }
-
-    .testimonial-section-image {
-        position: static;
-        height: 280px;
-        left: auto;
-    }
-}*/
-
 /* Contact Page - Contact Content */
 
 .contact-content-section {
@@ -1228,8 +1218,8 @@ form {
 }
 
     .question-section-content > p {
-        margin: 0 0 1rem 0;
-        font-size: 1.125rem; /* “Have a question?” */
+        margin: 1rem 1rem;
+        font-size: 1.125rem;
         font-weight: 700;
         color: var(--color-primary);
     }
@@ -1261,6 +1251,12 @@ form {
     min-height: 180px;
     resize: vertical;
 }
+
+    .text-area textarea::placeholder {
+        font-style: italic;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+    }
 
 .question-form .form-submit {
     justify-content: start;
