@@ -337,6 +337,45 @@
     .testimonial-section-image {
         display: none;
     }
+
+    .contact-content-section {
+        padding-block: 7rem;
+    }
+
+    .contact-content-inner {
+        width: 92%;
+        top: 160px; /* tablete uygun taşırma */
+        left: 0;
+        margin-inline: auto;
+        padding: 2.25rem 1.5rem;
+    }
+
+    .contact-content-title {
+        font-size: 32px;
+        width: 80%;
+        text-align: center;
+    }
+
+    .contact-content-desc {
+        width: 85%;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .contact-form {
+        grid-template-columns: repeat(2, minmax(0,1fr)); /* iki sütun */
+        gap: 0.875rem 1rem;
+        margin-inline: 1.5rem;
+    }
+
+    .form-submit {
+        justify-content: center;
+    }
+
+        .form-submit .form-btn {
+            padding: 1rem 2rem;
+            font-size: .95rem;
+        }
 }
 
 
@@ -561,6 +600,7 @@
         margin-top: -.4rem;
         background-position: top center;
         background-size: 520px auto;
+        margin-bottom: 0;
     }
 
     .success-story {
@@ -599,7 +639,7 @@
     }
 
     .success-story-image img {
-        display:none;
+        display: none;
     }
 
     .partners-list {
@@ -640,4 +680,52 @@
     .testimonial-section-image {
         display: none;
     }
+
+    .contact-content-section .container {
+        width:85%;
+    }
+    .contact-content-section {
+        padding-block: 7rem;
+        margin-bottom: 2rem;
+    }
+
+    .contact-content-inner {
+        width: 100%;
+        top: 120px;
+        left: 0;
+        margin-inline: 0;
+        padding: 2rem 1rem;
+    }
+
+    .contact-content-title {
+        font-size: 28px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-content-desc {
+        width: 100%;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .contact-content-form {
+        width: 100%;
+    }
+
+    .contact-form {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        margin-inline: 0.75rem;
+    }
+
+    .form-submit {
+        justify-content: center;
+    }
+
+        .form-submit .form-btn {
+            padding: 0.875rem 1.5rem;
+            font-size: .9rem;
+        }
+}
 }
