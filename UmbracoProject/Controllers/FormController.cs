@@ -59,5 +59,23 @@ public class FormController(
         }
         return RedirectToCurrentUmbracoPage();
     }
+
+    public IActionResult HandleQuestionForm(QuestionFormViewModel model) 
+    {
+        if (!ModelState.IsValid)
+            return CurrentUmbracoPage();
+
+        var result = _formSubmissonsService.SaveQuestionFormRequest(model);
+        if (!result)
+        {
+            TempData["ErrorMessage"] = "An error occurred while sending your message. Please try again later.";
+            return RedirectToCurrentUmbracoPage();
+        }
+        else
+        {
+            TempData["SuccessMessage"] = "Your message has been sent. We will get back to you as soon as possible.";
+        }
+        return RedirectToCurrentUmbracoPage();
+    }
 }
 
