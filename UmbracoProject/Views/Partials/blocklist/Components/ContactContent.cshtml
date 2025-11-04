@@ -1,0 +1,41 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using UmbracoProject.ViewModels
+@{
+    var content = (ContentModels.ContactContent)Model.Content;
+    var settings = Model.Settings as ContentModels.ContactContentSettings;
+
+    var formViewModel = new ContactFormViewModel
+    {
+        Options = settings?.ContactRequestOptions ?? []
+    };
+
+}
+
+<section class="contact-content-section">
+    <div class="container">
+        <div class="contact-content-inner">
+            <div class="contact-content-details">
+                <p class="contact-content-label">@content.ContactPageContentLabel</p>
+                <h2 class="contact-content-title">@content.ContactPageContentTitle</h2>
+                <p class="contact-content-desc">@content.ContactPageContentDesc</p>
+            </div>
+            <div class="contact-content-form">
+                <partial name="Partials/Forms/_ContactForm" model="formViewModel" />
+
+                @if (TempData["SuccessMessage"] != null)
+                {
+                    <div class="contact-request-success">
+                        @TempData["SuccessMessage"]
+                    </div>
+                }
+                else if (TempData["ErrorMessage"] != null)
+                {
+                    <div class="contact-request-error">
+                        @TempData["ErrorMessage"]
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
