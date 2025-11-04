@@ -11,6 +11,9 @@
 		<div class="service-detail">
 			<aside class="service-detail-aside">
 				@Html.GetBlockListHtml(Model.ServiceDetailAsides)
+				<div class="aside-contact-card">
+                    @Html.GetBlockListHtml(Model.ContactCardAside)
+				</div>
 			</aside>
 
 			<div class="service-detail-line"></div>
