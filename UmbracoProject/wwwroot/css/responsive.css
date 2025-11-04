@@ -376,6 +376,15 @@
             padding: 1rem 2rem;
             font-size: .95rem;
         }
+
+    .service-detail {
+        flex-direction: column;
+    }
+
+    .service-detail-aside {
+        display: none;
+    }
+
 }
 
 
@@ -727,5 +736,25 @@
             padding: 0.875rem 1.5rem;
             font-size: .9rem;
         }
-}
+
+    .service-detail-section{
+        padding-block: 2rem
+    }
+    .service-detail {
+        flex-direction: column;
+    }
+
+    .service-detail-aside {
+        display: none;
+    }
+
+    .question-section {
+        padding-block:1rem;
+    }
+    .question-form-del-1 {
+        flex-direction: column;
+    }
+    .question-section-content {
+        max-width: 350px;
+    }
 }
