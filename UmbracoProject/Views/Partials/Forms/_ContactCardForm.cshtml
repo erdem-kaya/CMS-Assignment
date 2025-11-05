@@ -1,0 +1,45 @@
+﻿@using UmbracoProject.ViewModels
+@model ContactCardViewModel;
+
+@using (Html.BeginUmbracoForm("HandleContactCard", "Form", FormMethod.Post, new { novalidate = "novalidate", id = "contactCardForm" }))
+{
+    <div class="contact-card-input">
+        <div class="form-group">
+            <input asp-for="Email" type="email" placeholder="E-mail address" class="form-control form-italic" required />
+            <i class="fa-solid fa-envelope" id="contactCardIcon" aria-hidden="true"></i>
+        </div>
+    </div>
+}
+
+<script>
+    /* Chatgpt hjälpte mig */
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('contactCardForm');
+      const emailInput = form.querySelector('input[type="email"]');
+      const icon = form.querySelector('#contactCardIcon');
+
+      function submitIfValid() {
+        if (form.checkValidity()) {
+          if (form.requestSubmit) form.requestSubmit();
+          else form.submit();
+        } else {
+          emailInput.reportValidity();
+          emailInput.focus();
+        }
+      }
+      emailInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          submitIfValid();
+        }
+      });
+
+      if (icon) {
+        icon.style.cursor = 'pointer';
+        icon.addEventListener('click', (e) => {
+          e.preventDefault();
+          submitIfValid();
+        });
+      }
+    });
+</script>
