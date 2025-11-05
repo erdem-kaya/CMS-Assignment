@@ -456,6 +456,7 @@ h2, h3, h4, p {
     max-width: 70ch;
     color: var(--color-body-text);
     font-size: var(--text-lg);
+    margin-bottom: 1rem;
 }
 
 .service-grid {
@@ -1323,4 +1324,72 @@ form {
     margin-right: 0;
     padding: 0.5rem;
     font-size: var(--text-xs);
+}
+
+/* Swiper */
+.custom-prev,
+.custom-next {
+    display:flex;
+    align-items: center;
+    font-size: 1.2rem;
+    line-height: 1.75rem;
+    font-weight: 600; 
+    color: var(--color-primary);
+    cursor: pointer;
+    user-select: none;
+}
+
+    .custom-prev:hover,
+    .custom-next:hover {
+        color: var(--color-primary);
+    }
+
+    .swiper-button-disabled,
+    .custom-prev.swiper-button-disabled,
+    .custom-next.swiper-button-disabled {
+        color: var(--color-primary);
+        cursor: default;
+        pointer-events: none;
+        opacity: .6;
+    }
+
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    position: relative;
+    width: auto !important;
+    bottom: 0 !important;
+    left: 0;
+    right: 0;
+}
+
+.swiper-pagination-bullet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    background: var(--color-white);
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 1;
+    border: none;
+    outline: none;
+    color: inherit;
+    box-shadow: none;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+}
+
+    .swiper-pagination-bullet:hover {
+        outline: 2px solid var(--color-primary);
+        opacity: 1;
+    }
+
+.swiper-pagination-bullet-active {
+    background: var(--color-secondary);
+    outline: 1px solid var(--color-border);
+    color: var(--color-primary);
 }
