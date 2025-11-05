@@ -77,5 +77,22 @@ public class FormController(
         }
         return RedirectToCurrentUmbracoPage();
     }
+
+    public IActionResult HandleContactCard(ContactCardViewModel model) 
+    {
+        if (!ModelState.IsValid)
+            return CurrentUmbracoPage();
+        var result = _formSubmissonsService.SaveContactCardEmailAddressRequest(model);
+        if (!result)
+        {
+            TempData["ErrorMessage"] = "Your email address could not be saved in the system.";
+            return RedirectToCurrentUmbracoPage();
+        }
+        else
+        {
+            TempData["SuccessMessage"] = "Your email address has been saved in the system.";
+        }
+        return RedirectToCurrentUmbracoPage();
+    }
 }
 

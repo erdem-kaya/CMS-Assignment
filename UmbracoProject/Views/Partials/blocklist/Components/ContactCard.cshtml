@@ -1,15 +1,27 @@
 ﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using UmbracoProject.ViewModels
 @{
     var content = (ContentModels.ContactCard)Model.Content;
+    var formViewModel = new ContactCardViewModel();
 }
 
 <div class="contact-card-content">
     <p class="contact-card-title">@content.ContactCardTitle</p>
     <p class="contact-card-desc">@content.ContactCardDesc</p>
-    <div class="contact-card-input">
-        <div class="form-group">
-            <input type="email" placeholder="E-mail address" class="form-control form-italic" />
+    <partial name="Partials/Forms/_ContactCardForm" model="formViewModel" />
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="callback-request-success">
+            @TempData["SuccessMessage"]
         </div>
-    </div>
+    }
+    else if (TempData["ErrorMessage"] != null)
+    {
+        <div class="callback-request-error">
+            @TempData["ErrorMessage"]
+        </div>
+    }
 </div>
+

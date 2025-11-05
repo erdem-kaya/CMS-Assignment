@@ -84,4 +84,26 @@ public class FormSubmissonsService(IContentService contentService)
             return false;
         }
     }
+
+    public bool SaveContactCardEmailAddressRequest (ContactCardViewModel model)
+    {
+        try
+        {
+            var container = _contentService.GetRootContent().FirstOrDefault(c => c.ContentType.Alias == "fromSubmissions");
+            if (container == null)
+                return false;
+            var requestName = $"ContactCardEmail: {model.Email} - {DateTime.Now:yyyy-MM-dd HH:mm:ss}";
+            var request = _contentService.Create(requestName, container, "contactCardRequest");
+            if (request == null)
+                return false;
+            request.SetValue("contactCardEmailRequest", model.Email);
+            var saveResult = _contentService.Save(request);
+            return saveResult.Success;
+        }
+        catch (Exception ex)
+        {
+            // Log the exception (ex) here if needed
+            return false;
+        }
+    }
 }
