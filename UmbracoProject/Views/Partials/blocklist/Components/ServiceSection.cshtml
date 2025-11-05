@@ -22,27 +22,38 @@
             }
             <div class="rte service-title">@Html.Raw(content.ServiceTitle)</div>
         </div>
-        <div class="service-grid">
-
+        @* <div class="service-grid"> *@
             @if(items.Any())
             {
-                @foreach (var item in items)
-                {
-                    <div class="service-card">
-                        <a href="@item.Url()" class="service-card-link">
-                            <h4 class="service-card-title">@item.Name</h4>
-                            <img src="@(item.ServiceDetailThumbnail?.Url() ?? "~/images/risk-management.svg")" alt="@(item.Name ?? "No Service")" class="service-card-image" />
-                            <p class="service-card-text">
-                                @item.ServiceDetailExcerpt
-                            </p>
-                        </a>
-                    </div>
-                }
+            <div class="swiper serviceSwiper">
+                <div class="swiper-wrapper">
+                    @foreach (var item in items)
+                    {
+                        <div class="swiper-slide">
+                            <div class="service-card">
+                                <a href="@item.Url()" class="service-card-link">
+                                    <h4 class="service-card-title">@item.Name</h4>
+                                    <img src="@(item.ServiceDetailThumbnail?.Url() ?? "~/images/risk-management.svg")" alt="@(item.Name ?? "No Service")" class="service-card-image" />
+                                    <p class="service-card-text">
+                                        @item.ServiceDetailExcerpt
+                                    </p>
+                                </a>
+                            </div> 
+                        </div>
+                    }
+                </div>
+                <div class="custom-pagination">
+                    <div class="custom-prev">Prev</div>
+                    <div class="swiper-pagination"></div>
+                    <div class="custom-next">Next</div>
+                </div>
+
+            </div>
             }
             else
             {
                 <p>No services available at the moment.</p>
             }
-        </div>
+        @* </div> *@
     </div>
 </section>
