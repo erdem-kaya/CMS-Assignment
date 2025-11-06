@@ -413,6 +413,21 @@
 
 /* Responsive for Mobile */
 @media (max-width: 767px) {
+    .container {
+        width:90%;
+    }
+    .footer-content{ justify-content: center; }
+    .footer-content p {
+        font-size: 0.6rem;
+    }
+    .about-ceo-right {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    }
+    .about-ceo-image img {
+        height: 320px;
+    }
     .hero {
         padding-block: 4.5rem;
     }
@@ -422,9 +437,9 @@
     }
 
     .hero-title {
-        font-size: 2.25rem;
+        font-size: 1.9rem;
         line-height: 1.1;
-        width: 65%;
+        width: 75%;
     }
 
     .hero-container .rte {
@@ -434,7 +449,7 @@
     /* Button */
     .btn {
         display: inline-flex;
-        width: auto;
+        width: 50%;
         max-width: max-content;
         align-self: flex-start;
     }
@@ -641,6 +656,12 @@
         justify-content: center;
     }
 
+    .success-stories {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .success-story-content {
         margin-right: 0;
         margin-bottom: 1rem;
@@ -667,7 +688,7 @@
     }
 
     .success-stories-desc {
-        font-size: 1rem;
+        font-size: .9rem;
     }
 
     .success-story-image img {
