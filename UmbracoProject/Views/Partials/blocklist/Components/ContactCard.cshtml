@@ -13,13 +13,13 @@
 
     @if (TempData["SuccessMessage"] != null)
     {
-        <div class="callback-request-success">
+        <div class="contact-card-success">
             @TempData["SuccessMessage"]
         </div>
     }
     else if (TempData["ErrorMessage"] != null)
     {
-        <div class="callback-request-error">
+        <div class="contact-card-error">
             @TempData["ErrorMessage"]
         </div>
     }
