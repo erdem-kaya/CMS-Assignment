@@ -92,6 +92,21 @@ h2, h3, h4, p {
         opacity: 0.95;
     }
 
+.btn-secondary {
+    width: 100%;
+    padding: 1rem 2rem;
+    border:0;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--color-body-text);
+    background-color: var(--color-secondary-light);
+    cursor: pointer;
+}
+
+    .btn-secondary:hover {
+       background-color: var(--color-secondary);
+    }
+
 /* Layouts */
 /* TopBar */
 
@@ -812,6 +827,10 @@ form {
         transform: translateY(1px);
     }
 
+.about-request-success,
+.about-request-error,
+.contact-content-success,
+.contact-content-error,
 .callback-request-success,
 .callback-request-error {
     padding: 1rem;
@@ -819,14 +838,35 @@ form {
     margin-right: 2rem;
     margin-bottom: 1rem;
     border-radius: .375rem;
+    text-align: center;
 }
 
+.about-request-success,
+.contact-content-success,
 .callback-request-success {
     background-color: #f0fdf4;
     color: #15803d;
 }
 
+.about-request-error,
+.contact-content-error,
 .callback-request-error {
+    background-color: #fef2f2;
+    color: #b91c1c;
+}
+.contact-card-success,
+.contact-card-error {
+    padding: 1rem;
+    border-radius: .375rem;
+    font-size: 0.7rem;
+}
+
+.contact-card-success {
+    background-color: #f0fdf4;
+    color: #15803d;
+}
+
+.contact-card-error {
     background-color: #fef2f2;
     color: #b91c1c;
 }
